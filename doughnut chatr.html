@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function () {
+
+var options = {
+	animationEnabled: true,
+	title: {
+		text: ""
+	},
+	data: [{
+		type: "doughnut",
+		innerRadius: "60%",
+		showInLegend: true,
+		legendText: "",
+		indexLabel: "",
+		dataPoints: [
+			{ label: "collection progress", y: 6492917 },
+			{ label: "Reject", y: 7380554 },
+			{ label: "Group created", y: 1610846 },
+			{ label: "Proposal", y: 950875 },
+			{ label: "Demand Taken", y: 900000 }
+		]
+	}]
+};
+$("#chartContainer1").CanvasJSChart(options);
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer1" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</body>
+</html>

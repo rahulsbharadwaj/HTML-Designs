@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+window.onload = function () {
+
+var options = {
+	animationEnabled: true,
+	theme: "light2",
+	title:{
+		text:""
+	},
+	axisY: {
+		title: "",
+		valueFormatString: "#0",
+		suffix: "",
+		prefix: ""
+	},
+	legend: {
+		cursor: "pointer",
+		itemclick: toogleDataSeries
+	},
+	toolTip: {
+		shared: true
+    },
+	data: [{
+		type: "area",
+		name: "",
+		
+		showInLegend: true,
+		xValueFormatString: "Year ####",
+		yValueFormatString: "#######.00",
+		dataPoints: [
+			{ x:2009, y: 50000 },
+			{ x:2010, y: 90000 },
+			{ x:2011, y: 120000 },
+			{ x:2012, y: 140000 },
+			{ x:2013, y: 150000 },
+			{ x:2014, y: 180000 },
+			{ x:2015, y: 120000 },
+
+		]
+	}, {
+		type: "area",
+		name: "",
+		
+		showInLegend: true,
+		yValueFormatString: "Year ####",
+		dataPoints: [
+			{ x:2009, y: 45000 },
+			{ x:2010, y: 85000},
+			{ x:2011, y: 115000 },
+			{ x:2012, y: 135000 },
+			{ x:2013, y: 145000 },
+			{ x:2014, y: 175000  },
+			{ x:2015, y: 115000 },
+
+		]
+	}]
+};
+$("#chartContainer").CanvasJSChart(options);
+
+function toogleDataSeries(e) {
+	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	} else {
+		e.dataSeries.visible = true;
+	}
+	e.chart.render();
+}
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</body>
+</html>

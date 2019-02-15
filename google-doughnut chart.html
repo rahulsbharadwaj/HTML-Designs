@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Collection Progress',     7],
+          ['Rejected',      1],
+          ['Group Created',  4],
+          ['Disbursed ', 1],
+		  ['Demand Taken ', 1],
+		  ['Group Approved ', 1],
+          ['Proposal',    1]
+        ]);
+
+        var options = {
+          title: '',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="donutchart" style="width: 100%; height: 250px;"></div>
+  </body>
+</html>
