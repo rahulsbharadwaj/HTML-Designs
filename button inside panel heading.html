@@ -1,0 +1,67 @@
+<!docrype html>
+<html lang="en">
+<head>
+<title>Case Create Page</title>
+<meta charset="utf-8">
+<meta name="view-port" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-footer">
+                    <div class="row">
+      <div class="col-sm-2.6 pull-right ">
+       <a class="btn btn-success btn-xs"  ng-if="userForm1.$invalid == false" data-toggle="modal" data-target="#ConfirmModal">
+                                <i class="fa fa-check-square-o"></i> Save
+                            </a>
+                            <a class="btn btn-danger btn-xs" ng-click="vm.Close()">
+                                <i class="fa fa-times"></i> Cancel
+                            </a>&nbsp;&nbsp;
+                        </div>
+        </div>
+    </div>
+   </div>
+  </div>
+ 
+ <!-- Modal -->
+    <div class="modal fade" id="AlertModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#eeeeee;height:40px">
+                    <i class="fa fa-exclamation-triangle" style="color:red"></i> <b>Alert!!</b>
+                </div>
+                <div class="modal-body" style="height:90px">
+                    <div class="pull-left" style="color:black"> <p>Missing or Invalid data. Please update and resubmit.</p></div>
+                    <a class="btn btn-danger btn-xs pull-right" data-dismiss="modal">
+                        <i class="fa fa-close"></i> Close
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="modal fade" id="ConfirmModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#eeeeee;height:40px">
+                    <i class="fa fa-check-circle" style="color:green"></i> <b>Confirm</b>
+                </div>
+                <div class="modal-body" style="height:90px">
+                    <div class="pull-left" style="color:black"> <p>Are you sure you want to Save this information? </p> </div>
+                    <a class="btn btn-danger btn-xs pull-right" data-dismiss="modal">
+                        <i class="fa fa-close"></i> Close
+                    </a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <a class="btn btn-success btn-xs"  ng-click="vm.saveOrder()"  data-dismiss="modal">
+                        <i class="fa fa-save"></i> Save
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<body>
+</html>

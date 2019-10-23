@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Google translate </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,es,nl,fr,de',
+        autoDisplay: false,
+        multilanguagePage: true,
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+      // If you have jQuery - works cross-browser - uncomment this
+      jQuery('.goog-logo-link').css('display', 'none');
+      jQuery('.goog-te-gadget').css('font-size', '0');
+      jQuery('.goog-te-banner').css('display', 'none');
+      // var a = document.querySelector("#google_translate_element select");
+      // a.selectedIndex=0;
+      // a.dispatchEvent(new Event('change'));
+    }
+  </script>
+  
+</head>
+<body>
+<div class="container">
+<p>this world is beautiful</p>
+          <div class="translate">
+            <div id="google_translate_element" class="pull-right"></div>
+          </div>
+</div>
+</body>
+</html>

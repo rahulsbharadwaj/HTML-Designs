@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Clearfix</title>
+	<meta charset="utf-8">
+	<meta name="view-port" content="width=device-width;initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+	<div class="card">
+		<div class="card-header">
+			<div style="text-align:center">
+				<h3>Clearfix Example</h3>
+			</div>
+		</div>
+		<div class="card-body">
+			<p>The Body of Card</p>
+		</div>
+		<div class="card-footer">
+			<div class="clearfix">
+				<div class="float-right">
+					<button type="button" class="btn btn-info">Save</button>&nbsp;
+					<button type="button" class="btn btn-danger">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br>
+	<div class="clearfix">	
+		<div class="float-right">
+			<button type="button" class="btn btn-primary">Save</button>&nbsp;
+			<button type="button" class="btn btn-danger">Cancel</button>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="clearfix">
+		<div class="float-none">
+			<button type="button" class="btn btn-info">Save</button>
+			<button type="button" class="btn btn-secondary">Cancel</button>
+		</div>
+	</div>
+</div>
+</body>
+<html>

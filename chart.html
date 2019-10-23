@@ -1,56 +1,83 @@
-<!DOCTYPE HTML>
-<html>
-<head>  
-  <script type="text/javascript">
-  window.onload = function () {
-
-    var chart = new CanvasJS.Chart("chartContainer1",
-    {
-        axisY:{
-            valueFormatString:"#######.00"
-        },
-        axisX:{
-           valueFormatString:"####"
-        },
-      data: [
-      {        
-        type: "area",
-        xValueFormatString:"Year ####",
-        yValueFormatString:"#######.00",
-        dataPoints: [
-			{ x:2009, y: 50000 },
-			{ x:2010, y: 90000},
-			{ x:2011, y: 120000 },
-			{ x:2012, y: 140000 },
-			{ x:2013, y: 150000 },
-			{ x:2014, y: 180000  },
-			{ x:2015, y: 120000 },
-        ]
-      },{
-        type: "area",
-        xValueFormatString:"Year ####",
-        yValueFormatString:"#######.00",
-		dataPoints: [
-			{ x:2009, y: 45000 },
-			{ x:2010, y: 85000},
-			{ x:2011, y: 115000 },
-			{ x:2012, y: 135000 },
-			{ x:2013, y: 145000 },
-			{ x:2014, y: 175000  },
-			{ x:2015, y: 115000 },
-
-		]
-	}
-      ]
-    });
-
-    chart.render();
-  }
-  </script>
-  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<!doctype html>
+<html lang="en">
+<head>
+<title>Mooris Charts</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width;initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+  
 </head>
 <body>
-  <div id="chartContainer1" style="height: 300px; width: 100%;">
-  </div>
+<div class="container">
+<br>
+<br>
+	<div class="card" style="border-radius: 15px">
+		<div class="card-header" style="background-color:#4A7192">
+			<div class="float-left" style="color:white">
+					<h5>Distance(miles)</h5>
+			</div>
+			<div class="float-right" style="color:white">
+					<h5>Last 7 Days</h5>
+			</div>
+		</div>
+		<div class="card-body" style="background-color:#B4CCDF">
+				<div class="row">
+					<div class="col-sm-2">
+						<h6>Monday</h6><br>
+						<h6>Tuesday</h6><br>
+						<h6>Wednesday</h6><br>
+						<h6>Thursday</h6><br>
+						<h6>Friday</h6><br>
+						<h6>saturday</h6><br>
+						<h6>Sunday</h6><br>
+					</div>
+					<div class="col-sm-8">
+						  <div class="progress" style="height:30px">
+								<div class="progress-bar" style="width:60%;height:30px;background-color:deepskyblue"></div>
+						  </div>
+						  <br>
+						  <div class="progress" style="height:30px">
+								<div class="progress-bar" style="width:60%;height:30px"></div>
+						  </div>
+						  <br>
+						  <div class="progress" style="height:30px">
+								<div class="progress-bar" style="width:60%;height:30px"></div>
+						  </div>
+						  <br>
+						  <div class="progress" style="height:30px">
+								<div class="progress-bar" style="width:60%;height:30px"></div>
+						  </div>
+						  <br>
+						  <div class="progress" style="height:30px">
+								<div class="progress-bar" style="width:60%;height:30px"></div>
+						  </div>
+						  <br>
+						  <div class="progress" style="height:30px">
+								<div class="progress-bar" style="width:60%;height:30px"></div>
+						  </div>
+						  <br>
+						  <div class="progress" style="height:30px">
+								<div class="progress-bar" style="width:60%;height:30px"></div>
+						  </div>
+						  
+					</div>
+					<div class="col-sm-2">
+						<h6>1256</h6><br>
+						<h6>1356</h6><br>
+						<h6>1564</h6><br>
+						<h6>2456</h6><br>
+						<h6>1598</h6><br>
+						<h6>1546</h6><br>
+						<h6>1235</h6><br>
+					</div>
+				</div>
+		</div>
+	<div>
+</div>
 </body>
 </html>
